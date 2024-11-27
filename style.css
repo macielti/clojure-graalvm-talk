@@ -1,0 +1,45 @@
+body { 
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+@media (width <= 1024px) {
+  body {
+    font-size: 1.5em;
+  }
+}
+
+@media (width <= 600px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+img {
+  max-height: 70vh;
+}
+
+main {
+  text-align: center;
+  padding: 0 2em;
+}
+
+ul li {
+  text-align: left;
+  line-height: 1.5em;
+}
+
+section {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 1em 0;
+}
