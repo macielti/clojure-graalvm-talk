@@ -36,12 +36,6 @@
          [:img {:src "media/diagram.png"}]]
 
         [:section
-         [:h1 "Rango"]
-         [:p "Rango is a REST API for school canteen management (GraalVM compliant version)"]
-         [:p "https://github.com/macielti/rango-graalvm"]
-         [:img {:src "media/repository-qr-code.png"}]]
-
-        [:section
          [:h1 "Principais Dependências"]
          [:ul
           [:li "Pedestal - Server-side development"]
@@ -51,7 +45,32 @@
           [:li "Iapetos - Prometheus Client"]
           [:li "Prismatic Schema - library for declarative data description and validation"]
           [:li "java-time - Date-Time API for Clojure"]
-          [:li "clj-http-lite - A JVM and babashka compatible lite version of clj-http"]]]]])
+          [:li "clj-http-lite - A JVM and babashka compatible lite version of clj-http"]]]
+
+        [:section
+         [:h1 "Gerando a Imagem Nativa"]
+         [:ul [:li "Composição do comando para gerar a imagem nativa."]
+              [:li "Configurações adicionais para guiar o compilador."]]]
+
+        [:section
+         [:h1 "Composição do comando para gerar a imagem nativa"]
+         [:img {:src "media/native-image-command.png"}]]
+
+        [:section
+         [:h1 "Clojure Reflections"]
+         [:img {:src "media/reflection-example.png"}]]
+        [:section
+         [:h1 "Clojure Reflections"]
+         [:img {:src "media/reflection-example.png"}]
+         [:p "GraalVM vai adicionar apenas as classes que ele acha que o código Clojure está usando."]]
+        [:section
+         [:h1 "Clojure Reflections"]
+         [:img {:src "media/current-reflection-config.png"}]]
+
+        [:section
+         [:h1 "Recursos"]
+         [:p "Clojure meets GraalVM - https://github.com/clj-easy/graalvm-clojure"]
+         [:p "Graal Docs - https://github.com/clj-easy/graal-docs"]]]])
 
 ; *** implementation details *** ;
 
