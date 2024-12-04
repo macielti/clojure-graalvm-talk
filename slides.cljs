@@ -19,8 +19,10 @@
          [:ul
           [:li "Não sou especialista em GraalVM."]
           ;;TODO: Meu contato inical com o GraalVM é bem recente, eu estudei o suficiente pra fazer esse experimento e atingir os resultados que eu esperava.
-          [:li "Foco em estabilidade e consumo mínimo de recursos."]
+          ;;TODO: Provavelmente existem muitas possibilidades de ainda com o GraalVM que eu não explorei ainda.
+          [:li "Foco em estabilidade e consumo mínimo de recursos, ambiente de produção com crestimento de demanta ."]
           ;;TODO: Alta Performance e escalabilidade vai vão ficar para um segundo momento.
+          ;;TODO: Ambiente de produção com demanda de processamento de requisições estável.
           [:li "Native Images são recomendadas para processos de curta duração."]
           ;;TODO: Geralmente as aplicações web são mais complexas com carregamento dinâmico de classes e um número maior de dependências.
           ;;TODO: Mas eu decidi tentar mesmo assim.
