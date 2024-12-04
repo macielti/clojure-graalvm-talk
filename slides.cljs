@@ -18,6 +18,8 @@
          [:h1 "Disclaimer"]
          [:ul
           [:li "Não sou especialista em GraalVM."]
+          [:li "Foco em estabilidade e consumo mínimo de recursos."]
+          ;;TODO: Alta Performance e escalabilidade vai vão ficar para um segundo momento.
           [:li "Native Images são recomendadas para processos de curta duração."]]]
 
         [:section
@@ -50,7 +52,7 @@
         [:section
          [:h1 "Gerando a Imagem Nativa"]
          [:ul [:li "Composição do comando para gerar a imagem nativa."]
-              [:li "Configurações adicionais para guiar o compilador."]]]
+          [:li "Configurações adicionais para guiar o compilador."]]]
 
         [:section
          [:h1 "Composição do comando para gerar a imagem nativa"]
