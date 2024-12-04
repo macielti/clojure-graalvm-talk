@@ -18,17 +18,26 @@
          [:h1 "Disclaimer"]
          [:ul
           [:li "Não sou especialista em GraalVM."]
+          ;;TODO: Meu contato inical com o GraalVM é bem recente, eu estudei o suficiente pra fazer esse experimento e atingir os resultados que eu esperava.
           [:li "Foco em estabilidade e consumo mínimo de recursos."]
           ;;TODO: Alta Performance e escalabilidade vai vão ficar para um segundo momento.
-          [:li "Native Images são recomendadas para processos de curta duração."]]]
+          [:li "Native Images são recomendadas para processos de curta duração."]
+          ;;TODO: Geralmente as aplicações web são mais complexas com carregamento dinâmico de classes e um número maior de dependências.
+          ;;TODO: Mas eu decidi tentar mesmo assim.
+          ;;TODO: E com esse experimento eu descobri que não é tão complexo assim, e mesmo nos casos onde se tem um nível mais alto de complexidade nas configurações do processo de compilação, existem recursos pra nos ajudar com os cenários recorrentes.
+          ]]
 
         [:section
          [:h1 "Meu caso de uso"]
          [:ul
           [:li "Executar projetos pessoais em máquinas com recursos computacionais limitados."
+           ;;TODO: O meu homelab é composto por um Mini PC Intel Celeron Dual Core com 4GB de RAM e 64GB de armazenamento.
            [:ul
+            ;;TODO: Mini projetos pessoais, que não necessáriamente me trazem lucro, mas que me fazem economizar tempo e melhoram a minha qualidade de vida.
             [:li "Projetos no " [:span {:style {:color "red"}} "vermelho"] "."]
             [:li "Aplicações Web."]]]]]
+
+        ;TODO: Chega de contexto, e configuração de espectativas. Vamos lá!.
 
         [:section
          [:h1 "185MiB"]]
@@ -72,7 +81,8 @@
         [:section
          [:h1 "Recursos"]
          [:p "Clojure meets GraalVM - https://github.com/clj-easy/graalvm-clojure"]
-         [:p "Graal Docs - https://github.com/clj-easy/graal-docs"]]]])
+         [:p "Graal Docs - https://github.com/clj-easy/graal-docs"]
+         [:p "Clojurians Slack #graalvm channel"]]]])
 
 ; *** implementation details *** ;
 
