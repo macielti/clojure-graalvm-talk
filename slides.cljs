@@ -18,8 +18,8 @@
          [:h1 "Disclaimer"]
          [:ul
           [:li "Não sou especialista em GraalVM."]
-          ;;TODO: Meu contato inical com o GraalVM é bem recente, eu estudei o suficiente pra fazer esse experimento e atingir os resultados que eu esperava.
-          ;;TODO: Provavelmente existem muitas possibilidades de ainda com o GraalVM que eu não explorei ainda.
+          ;;TODO: Meu contato inical com o GraalVM é bem recente, eu estudei o suficiente pra começar esse experimento e atingir os resultados que eu esperava.
+          ;;TODO: Provavelmente existem muitas possibilidades com o GraalVM que eu ainda não explorei ainda.
           [:li "Foco em estabilidade e consumo mínimo de recursos, ambiente de produção com crestimento de demanta ."]
           ;;TODO: Alta Performance e escalabilidade vai vão ficar para um segundo momento.
           ;;TODO: Ambiente de produção com demanda de processamento de requisições estável.
@@ -42,13 +42,17 @@
         ;TODO: Chega de contexto, e configuração de espectativas. Vamos lá!.
 
         [:section
-         [:h1 "185MiB"]]
+         [:h1 "185MiB"]
+         ;;TODO: É a quantidade de memória RAM mínima para que uma aplicaçào web relativamente simples consiga se estabilizar em pé.
+         ]
 
         [:section
+         ;;TODO: E aqui estamos falando de uma aplicação com esta arquitetura.
          [:h1 "Diagrama de Arquitetura"]
          [:img {:src "media/diagram.png"}]]
 
         [:section
+         ;;TODO: E assim ficaram as dependências do projeto.
          [:h1 "Principais Dependências"]
          [:ul
           [:li "Pedestal - Server-side development"]
@@ -59,6 +63,8 @@
           [:li "Prismatic Schema - library for declarative data description and validation"]
           [:li "java-time - Date-Time API for Clojure"]
           [:li "clj-http-lite - A JVM and babashka compatible lite version of clj-http"]]]
+
+        ;;TODO: Chega de contexto sobre a aplicação web, vamos agora entende o que precisamos configurar para gerar a imagem nativa.
 
         [:section
          [:h1 "Gerando a Imagem Nativa"]
