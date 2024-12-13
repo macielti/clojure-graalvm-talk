@@ -7,6 +7,7 @@
        [:main
 
         [:section
+         ;;TODO: Bom dia, meu objetivo hoje com essa palestra é compartilhar com vocês os resultados de um experimento que eu fiz com o GraalVM com o objetivo de conseguir executar aplicações web de forma estável em ambientes com recursos de memória bem limitados.
          [:h1 "Otimizando Aplicações Web em Clojure para Ambientes com Recursos de Memória Limitados"]
          [:h2 "Resultados de Experimentos com GraalVM"]
          [:footer
@@ -20,13 +21,9 @@
           [:li "Não sou especialista em GraalVM."]
           ;;TODO: Meu contato inical com o GraalVM é bem recente, eu estudei o suficiente pra começar esse experimento e atingir os resultados que eu esperava.
           ;;TODO: Provavelmente existem muitas possibilidades com o GraalVM que eu ainda não explorei ainda.
-          [:li "Foco em estabilidade e consumo mínimo de recursos, ambiente de produção com crestimento de demanta ."]
+          [:li "Foco em estabilidade e consumo mínimo de recursos, ambiente de produção com crescimento de demanta estável."]
           ;;TODO: Alta Performance e escalabilidade vai vão ficar para um segundo momento.
           ;;TODO: Ambiente de produção com demanda de processamento de requisições estável.
-          [:li "Native Images são recomendadas para processos de curta duração."]
-          ;;TODO: Geralmente as aplicações web são mais complexas com carregamento dinâmico de classes e um número maior de dependências.
-          ;;TODO: Mas eu decidi tentar mesmo assim.
-          ;;TODO: E com esse experimento eu descobri que não é tão complexo assim, e mesmo nos casos onde se tem um nível mais alto de complexidade nas configurações do processo de compilação, existem recursos pra nos ajudar com os cenários recorrentes.
           ]]
 
         [:section
@@ -42,7 +39,7 @@
         ;TODO: Chega de contexto, e configuração de espectativas. Vamos lá!.
 
         [:section
-         [:h1 "185MiB"]
+         [:h1 "185MB"]
          ;;TODO: É a quantidade de memória RAM mínima para que uma aplicaçào web relativamente simples consiga se estabilizar em pé.
          ]
 
@@ -64,12 +61,7 @@
           [:li "java-time - Date-Time API for Clojure"]
           [:li "clj-http-lite - A JVM and babashka compatible lite version of clj-http"]]]
 
-        ;;TODO: Chega de contexto sobre a aplicação web, vamos agora entende o que precisamos configurar para gerar a imagem nativa.
-
-        [:section
-         [:h1 "Gerando a Imagem Nativa"]
-         [:ul [:li "Composição do comando para gerar a imagem nativa."]
-          [:li "Configurações adicionais para guiar o compilador."]]]
+        ;;TODO: Chega de contexto sobre a aplicação web, vamos agora entender o que precisamos configurar para gerar a imagem nativa.
 
         [:section
          [:h1 "Composição do comando para gerar a imagem nativa"]
@@ -87,10 +79,23 @@
          [:img {:src "media/current-reflection-config.png"}]]
 
         [:section
+         [:h1 "Resultados"]
+         [:p "Consumo de memória RAM lado a lado"]
+         [:img {:src "media/side-by-side-without-limitations.png"}]]
+
+        [:section
+         [:h1 "Resultados - Limitando Memória"]
+         [:p "Consumo de memória RAM"]
+         [:img {:src "media/results-limiting-memory.png"}]
+         [:img {:src "media/results-reaction.png"}]]
+
+        [:section
          [:h1 "Recursos"]
          [:p "Clojure meets GraalVM - https://github.com/clj-easy/graalvm-clojure"]
          [:p "Graal Docs - https://github.com/clj-easy/graal-docs"]
-         [:p "Clojurians Slack #graalvm channel"]]]])
+         [:p "Rango GraalVM - https://github.com/macielti/rango-graalvm"]
+         [:p "Clojurians Slack #graalvm channel"]
+         [:img {:src "media/graalvm-talk-qr-code.png"}]]]])
 
 ; *** implementation details *** ;
 
